@@ -1,0 +1,8 @@
+public void run()
+You’re going to put all the work the thread does in this one method. This method may invoke other methods; it may construct other objects; it may even spawn other threads.
+However, the thread starts here and it stops here. When the run() method completes, the thread dies.
+
+ public class DigestThread extends Thread {}
+If you subclass Thread, you should override run() and nothing else! 
+The various other methods of the Thread class—for example, start(), interrupt(), join(), sleep(), and so on—all have very specific semantics with the virtual machine 
+you should not replace any of the other standard Thread methods.
